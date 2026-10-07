@@ -1,0 +1,22 @@
+POST / api / teams / join › returns 404 when the RPC rejects an invalid invite code
+
+expect(received).toBe(expected) // Object.is equality
+
+Expected: 404
+Received: 500
+
+149 |     const response = await POST(request);
+150 |
+    > 151 | expect(response.status).toBe(404);
+          |                             ^
+    152 |   });
+153 |
+    154 | it("is idempotent for an already-joined member (ON CONFLICT DO NOTHING in the RPC)", async () => {
+
+at Object.<anonymous>(__tests__ / api / teams - join.test.ts: 151: 29)
+
+Test Suites: 1 failed, 2 passed, 3 total
+        Tests: 1 failed, 16 passed, 17 total
+        Snapshots: 0 total
+        Time: 3.008 s, estimated 4 s
+Ran all test suites.
